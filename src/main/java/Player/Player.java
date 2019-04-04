@@ -1,9 +1,16 @@
 package Player;
 
-public abstract class Player {
+import Game.IFight;
+import Game.ILive;
+
+public abstract class Player implements IFight, ILive {
 
     protected int health;
     protected String name;
+
+    public Player(){
+
+    }
 
     public Player(String name,int health) {
         this.health = health;
@@ -25,4 +32,10 @@ public abstract class Player {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void reduceHealth(int amount){
+        this.health -= amount;
+    }
+
+
 }

@@ -1,12 +1,12 @@
 package Characters;
 
 import Player.Melee;
-import Weapons.Axe;
+import Weapons.Hammer;
 
 public class Dwarve extends Melee {
 
-    public Dwarve(String name, int health, Axe axe) {
-        super(name, health, axe);
+    public Dwarve(String name, int health, Hammer hammer) {
+        super(name, health, hammer);
     }
 }
 
