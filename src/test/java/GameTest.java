@@ -1,3 +1,4 @@
+import Armor.Armor;
 import Characters.Dwarve;
 import Characters.Knight;
 import Enemies.Enemy;
@@ -24,13 +25,14 @@ public class GameTest {
     Hammer hammer;
     Game game;
     Room room;
+    Armor armor;
 
     @Before
     public void before(){
         sword = new Sword(10);
         hammer = new Hammer(10);
-        knight = new Knight("John",30,sword);
-        dwarve = new Dwarve("Joe", 30,hammer);
+        knight = new Knight("John",30,sword, armor);
+        dwarve = new Dwarve("Joe", 30,hammer,armor);
         troll = new Troll(100,sword);
         game = new Game();
         room = new Room("Gold", troll);

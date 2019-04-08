@@ -1,3 +1,4 @@
+import Armor.Armor;
 import Characters.Barbarian;
 import Characters.Dwarve;
 import Characters.Knight;
@@ -16,6 +17,7 @@ public class CharactersTest {
     Sword sword;
     Axe axe;
     Hammer hammer;
+    Armor armor;
 
     Knight knight;
     Barbarian barbarian;
@@ -26,10 +28,11 @@ public class CharactersTest {
         sword = new Sword(10);
         axe = new Axe(10);
         hammer = new Hammer(10);
+        armor = new Armor(10);
 
-        knight = new Knight("Sir John", 20, sword);
-        dwarve = new Dwarve("John", 20, hammer);
-        barbarian = new Barbarian("Emil", 20, axe);
+        knight = new Knight("Sir John", 20, sword, armor);
+        dwarve = new Dwarve("John", 20, hammer, armor);
+        barbarian = new Barbarian("Emil", 20, axe, armor);
 
     }
 
@@ -67,9 +70,9 @@ public class CharactersTest {
 
     @Test
     public void canTakeDamage(){
-        knight.reduceHealth(dwarve.attack());
-        dwarve.reduceHealth(knight.attack());
-        barbarian.reduceHealth(dwarve.attack());
+        knight.takingDamage(dwarve.attack());
+        dwarve.takingDamage(knight.attack());
+        barbarian.takingDamage(dwarve.attack());
 
         assertEquals(10,knight.getHealth());
         assertEquals(10,dwarve.getHealth());

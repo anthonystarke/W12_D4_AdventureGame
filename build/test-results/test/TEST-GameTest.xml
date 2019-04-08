@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GameTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-04-04T14:27:17" hostname="Anthonys-MacBook-Pro.local" time="0.001">
+<testsuite name="GameTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-04-05T13:02:35" hostname="Anthonys-MacBook-Pro.local" time="0.002">
   <properties/>
-  <testcase name="canAttackArrayList" classname="GameTest" time="0.001"/>
+  <testcase name="canAttackKnight" classname="GameTest" time="0.001"/>
+  <testcase name="canAttackTroll" classname="GameTest" time="0.0"/>
+  <testcase name="canHaveArrayList" classname="GameTest" time="0.0"/>
+  <testcase name="canAttackArrayList" classname="GameTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
